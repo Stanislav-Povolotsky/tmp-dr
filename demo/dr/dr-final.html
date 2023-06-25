@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Happy birthday!</title>
+  </head>
+<body style='background-image: url("img/happy-13th-birthday-social.webp");'>
+  <div class="px-4 py-5 my-5 text-center" style="background-color: rgba(255, 255, 255, 0.9);">
+    <h1 class="display-5 fw-bold">Ура! Поздравляем!</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Ты нашёл последнюю цифру: <b>12</b></p>
+      <p class="lead mb-4">А теперь вспомни все найденные сегодня цифры. Они помогут тебе найти зашифрованное слово.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-primary btn-lg px-4 gap-3" id="help">Помогите, я не понял, как расшифровать?</button>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+<script>
+$( "#help" ).on( "click", function() {
+  alert("Впомни алфавит.")
+} );
+</script>
+
+</body>
+</html>

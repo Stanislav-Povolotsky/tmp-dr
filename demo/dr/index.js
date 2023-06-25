@@ -154,6 +154,27 @@ async function y() {
     await h(),
     await f(),
     await u()
+
+    e.events.addEventListener('detect', () => {
+      //console.log('Event Detected:');
+      const persons = e.result.persons;
+      for (let i = 0; i < persons.length; i++) {
+        const face = persons[i].face;
+        const gestures = persons[i].gestures;
+        //const faceTxt = face ? `score:${face.score} age:${face.age} gender:${face.gender} iris:${face.distance}` : null;
+        //const body = persons[i].body;
+        //const bodyTxt = body ? `score:${body.score} keypoints:${body.keypoints?.length}` : null;
+        //console.log(`  #${i}: Face:${faceTxt} Body:${bodyTxt} LeftHand:${persons[i].hands.left ? 'yes' : 'no'} RightHand:${persons[i].hands.right ? 'yes' : 'no'} Gestures:${persons[i].gestures.length}`);
+        for (let j = 0; j < gestures.length; j++) {
+          // "mouth 91% open"
+          const res = gestures[j].gesture.match(/mouth (\d+)% open/);
+          if(res && parseInt(res[1]) > 70) {
+            window.location.assign('dr.html');
+          }
+        }
+      }
+    });
+
 }
 window.onload = y;
 //# sourceMappingURL=index.js.map
